@@ -22,8 +22,9 @@
     --space-xl: 8rem;
 
     /* Glassmorphism Presets */
-    --glass-bg: rgba(10, 15, 28, 0.7);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(10, 15, 28, 0.6);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.08); /* Nano Border */
+    --lava-gradient: linear-gradient(225deg, #001A33, #003366, #0066FF, #00FF9D);
     --glass-blur: blur(12px);
     
     /* Shadows */
@@ -67,6 +68,38 @@ body {
 }
 
 /* Background Effects */
+.lava-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--lava-gradient);
+    background-size: 400% 400%;
+    animation: lavaPulse 15s ease infinite;
+}
+
+.grid-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: 
+        linear-gradient(rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.5;
+}
+
+@keyframes lavaPulse {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .grid-background {
     position: fixed;
     top: 0;
@@ -112,16 +145,27 @@ body {
     opacity: 0.5;
 }
 
+/* Sovereign Navigation */
 .main-header {
-    padding: 2rem 5%;
+    padding: 1rem 5%;
     position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    background: rgba(2, 5, 11, 0.8);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 102, 255, 0.1);
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1000;
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 50px;
+    transition: var(--transition-slow);
+}
+
+.main-header:hover {
+    width: 95%;
+    background: rgba(10, 15, 28, 0.8);
 }
 
 nav {
@@ -279,7 +323,56 @@ nav {
     height: 2px;
     width: 100%;
     background: linear-gradient(90deg, transparent, var(--deep-blue), transparent);
-    animation: scan 2s infinite linear;
+    animation: scan 2s infinite;
+}
+
+/* Bento Grid System (Draftly Standard) */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.bento-card {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: var(--transition-slow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bento-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(0, 102, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.bento-card.col-2 { grid-column: span 2; }
+.bento-card.row-2 { grid-row: span 2; }
+
+.bento-card .card-icon {
+    font-size: 2rem;
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+}
+
+/* Scroll Reveal 3D */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(30px) rotateX(-10deg);
+    transition: opacity 0.8s var(--transition-slow), transform 0.8s var(--transition-slow);
+}
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
 }
 
 @keyframes scan {
@@ -723,6 +816,9 @@ nav {
 /* Mobile Responsive */
 @media (max-width: 1024px) {
     .hero {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         text-align: center;
         padding-top: 10rem;

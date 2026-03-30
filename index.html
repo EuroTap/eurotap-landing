@@ -14,56 +14,80 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,400;1,700;1,900&display=swap"
         rel="stylesheet">
+    <style>
+        .bento-card {
+            background: var(--glass-bg);
+            -webkit-backdrop-filter: var(--glass-blur);
+            backdrop-filter: var(--glass-blur);
+            border: var(--glass-border);
+        }
+    </style>
 </head>
 
 <body class="italic-400">
     <!-- MiroFish + Draftly Intelligent Layer -->
     <div class="draftly-noise"></div>
-    <div class="grid-background"></div>
+    <div class="lava-background"></div>
+    <div class="grid-overlay"></div>
 
     <header class="main-header">
         <nav>
             <div class="logo-container">
-                <img src="brand/globe_logo.svg" alt="EuroTap Logo" class="nav-logo">
-                <span class="brand-name">EURO<span class="brand-accent">TAP</span></span>
+                <div class="logo-orb"></div>
+                <span class="logo-text italic-900">EUROTAP</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#infrastructure">Infrastructure</a></li>
-                <li><a href="#security">Security</a></li>
-                <li><a href="#compliance">Compliance</a></li>
-                <li><a href="#euro-digital">Digital Euro</a></li>
-            </ul>
-            <div class="nav-cta">
-                <div class="system-pulse">
-                    <span class="pulse-dot"></span>
-                    <span class="pulse-label">SYSTEM LIVE</span>
-                </div>
-                <a href="#" class="btn-small">Acesso Institucional</a>
+            <div class="nav-links italic-400">
+                <a href="#mirofish">Inteligência</a>
+                <a href="#infrastructure">Infraestrutura</a>
+                <a href="#compliance">Conformidade</a>
+            </div>
+            <div class="nav-status">
+                <span class="status-dot"></span> <span class="italic-700">NODE_PT ONLINE</span>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" data-reveal>
             <div class="hero-content">
                 <div class="badge-accent revealed"><span class="pulse-dot"></span> ENXAME MIROFISH ATIVO </div>
                 <h1 class="hero-title italic-900"><span class="outlined-text">LIBERTE</span> A SUA <span class="text-gradient">SOBERANIA</span> FINANCEIRA.</h1>
                 <p class="hero-subtitle italic-400">A EuroTap não é apenas um terminal. É um nó de infraestrutura soberana que transforma dados em estratégia com a precisão Draftly.</p>
-                <div class="hero-stats revealed">
-                    <div class="stat-item">
-                        <span class="stat-value" id="stat-tps">--</span>
-                        <span class="stat-label">TPS CAPACITY</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-value" id="stat-latency">--</span>
-                        <span class="stat-label">LATENCY</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-value" id="stat-security">MAX</span>
-                        <span class="stat-label">ARMORING</span>
+                <section id="mirofish" class="mirofish-dashboard revealed">
+            <h2 class="section-title italic-900"><span class="outlined-text">MIROFISH</span> <span class="text-gradient">OASIS</span></h2>
+            
+            <div class="bento-grid">
+                <div class="bento-card col-2 row-2">
+                    <div class="card-icon">🧪</div>
+                    <h3 class="italic-900">Enxame de Agentes</h3>
+                    <p class="italic-400">Simulação de 5.000+ iterações de mercado por segundo.</p>
+                    <div class="live-stats">
+                        <span id="stat-tps" class="text-gradient">--</span> TPS
                     </div>
                 </div>
-                <div class="hero-actions">
+                
+                <div class="bento-card">
+                    <div class="card-icon">🛡️</div>
+                    <h3 class="italic-900">Integridade</h3>
+                    <p class="italic-400">DNAShield em tempo real.</p>
+                    <div class="stat-value" id="stat-integrity">--</div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="italic-900">Lag</h3>
+                    <p class="italic-400">Latência do Nó.</p>
+                    <div class="stat-value" id="stat-latency">--</div>
+                </div>
+
+                <div class="bento-card col-2">
+                    <div class="card-icon">📊</div>
+                    <h3 class="italic-900">Market Trend</h3>
+                    <div id="market-chart" style="height: 100px; width: 100%;"></div>
+                </div>
+            </div>
+        </section>
+        <div class="hero-actions">
                     <a href="#infrastructure" class="btn-primary">Explorar Infraestrutura</a>
                     <a href="#intelligence" class="btn-secondary">MiroFish Intelligence</a>
                 </div>

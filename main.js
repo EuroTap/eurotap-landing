@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         latency: document.getElementById('stat-latency'),
         agents: document.getElementById('swarm-agents'),
         health: document.getElementById('network-health'),
-        bar: document.querySelector('.bar-fill')
+        bar: document.querySelector('.bar-fill'),
+        bentoStats: document.querySelectorAll('[data-stat]')
     };
 
     telemetry.start({
