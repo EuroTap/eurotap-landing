@@ -1,96 +1,79 @@
 /**
- * EuroTap Website Main Interactions
+ * main.js - Draftly Intelligence 4.0 Logic
+ * 🧪 [MIROFISH_ENGINE]
  */
 
-import { MockTelemetryEngine } from './MockTelemetryEngine.js';
+class MockTelemetryEngine {
+    constructor() {
+        this.stats = {
+            tps: 0,
+            latency: 0,
+            integrity: 'OPTIMAL',
+            swarm: 5000
+        };
+    }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 🧪 Initialize MiroFish Mock Telemetry
-    const telemetry = new MockTelemetryEngine();
-    
-    const uiElements = {
-        tps: document.getElementById('stat-tps'),
-        latency: document.getElementById('stat-latency'),
-        agents: document.getElementById('swarm-agents'),
-        health: document.getElementById('network-health'),
-        bar: document.querySelector('.bar-fill'),
-        bentoStats: document.querySelectorAll('[data-stat]')
-    };
+    generateStats() {
+        this.stats.tps = Math.floor(Math.random() * (35000 - 30000) + 30000);
+        this.stats.latency = Math.floor(Math.random() * (12 - 5) + 5);
+        this.stats.integrity = Math.random() > 0.98 ? 'SHIELDING' : 'OPTIMAL';
+        this.stats.swarm = Math.floor(Math.random() * (6000 - 4500) + 4500);
+        return this.stats;
+    }
 
-    telemetry.start({
-        onUpdate: (stats) => {
-            if (uiElements.tps) uiElements.tps.textContent = stats.tps.toLocaleString();
-            if (uiElements.latency) uiElements.latency.textContent = stats.latency.toFixed(1) + 'ms';
-            if (uiElements.agents) uiElements.agents.textContent = stats.agents;
-            if (uiElements.health) {
-                uiElements.health.textContent = stats.integrity.toFixed(1) + '%';
-                if (uiElements.bar) uiElements.bar.style.width = stats.integrity + '%';
+    updateUI() {
+        const s = this.generateStats();
+        
+        const elements = {
+            'stat-tps': s.tps.toLocaleString(),
+            'stat-integrity': s.integrity,
+            'stat-latency': `NODE_LATENCY: ${s.latency}ms`
+        };
+
+        for (const [id, value] of Object.entries(elements)) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = value;
+        }
+    }
+
+    startDNAAnimation() {
+        const stream = document.getElementById('dna-stream');
+        if (!stream) return;
+        const bases = ['A', 'T', 'G', 'C'];
+        const prefixes = ['> SHIELDING...', '> MASKING...', '> DNA_CRYPT...', '> SOVEREIGN_STATUS: OK'];
+        
+        setInterval(() => {
+            let seq = prefixes[Math.floor(Math.random() * prefixes.length)] + '<br>';
+            for (let i = 0; i < 50; i++) {
+                seq += bases[Math.floor(Math.random() * 4)] + (i % 10 === 0 ? ' ' : '');
             }
+            stream.innerHTML = seq;
+        }, 150);
+    }
+
+    init() {
+        this.updateUI();
+        this.startDNAAnimation();
+        setInterval(() => this.updateUI(), 2500);
+    }
+}
+
+// [SCROLL_REVEAL_LOGIC]
+const reveal = () => {
+    const reveals = document.querySelectorAll('[data-reveal]');
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const revealTop = el.getBoundingClientRect().top;
+        const revealPoint = 150;
+        if (revealTop < windowHeight - revealPoint) {
+            el.classList.add('revealed');
         }
     });
+};
 
-    // Smooth Scrolling for Nav Links
-    const navLinks = document.querySelectorAll('.nav-links a, .hero-actions a');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const targetId = link.getAttribute('href');
-            if (targetId.startsWith('#')) {
-                e.preventDefault();
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    });
-
-    // DNA Sequence Randomizer (Cyber Attack / DNA Shield Visualization)
-    const dnaSeq = document.querySelector('.dna-sequence');
-    const bases = ['A', 'T', 'C', 'G'];
-
-    const updateDNA = () => {
-        let newSeq = '';
-        const len = window.innerWidth < 600 ? 15 : 30;
-        for (let i = 0; i < len; i++) {
-            newSeq += bases[Math.floor(Math.random() * bases.length)];
-            if (i < len - 1) newSeq += (Math.random() > 0.8 ? ' ' : '-');
-        }
-        if (dnaSeq) dnaSeq.textContent = newSeq;
-    };
-
-    setInterval(updateDNA, 150);
-
-    // Scroll Reveal Effects
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.feature-card, .section-title, .hero-content, .glass-panel, .hero-stats').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.8s ease-out';
-        observer.observe(el);
-    });
-
-    // Custom Animation for revealed items
-    const style = document.createElement('style');
-    style.textContent = `
-        .revealed {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(style);
+window.addEventListener('scroll', reveal);
+window.addEventListener('load', () => {
+    const engine = new MockTelemetryEngine();
+    engine.init();
+    reveal();
 });
