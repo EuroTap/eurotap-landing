@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroTap — Sovereign Payment Infrastructure</title>
+    <meta name="description"
+        content="EuroTap v11.4 — Next-Generation SoftPOS Infrastructure for Europe. Hardware-less NFC acceptance, DNA Code Shield, and Euro Digital integration.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="brand/globe_logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid-background"></div>
+
+    <header class="main-header">
+        <nav>
+            <div class="logo-container">
+                <img src="brand/globe_logo.svg" alt="EuroTap Logo" class="nav-logo">
+                <span class="brand-name">EURO<span class="brand-accent">TAP</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#infrastructure">Infrastructure</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#euro-digital">Digital Euro</a></li>
+            </ul>
+            <div class="nav-cta">
+                <div class="system-pulse">
+                    <span class="pulse-dot"></span>
+                    <span class="pulse-label">SYSTEM LIVE</span>
+                </div>
+                <a href="#" class="btn-small">Acesso Institucional</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge-accent revealed">Sovereign Protocol v12.5</div>
+                <h1 class="hero-title italic-900">O Fim do Terminal de Pagamento Físico.</h1>
+                <p class="hero-subtitle italic-400">O EuroTap transforma qualquer dispositivo móvel numa infraestrutura de pagamento soberana e bancária. Sem hardware. Sem fricção. Conformidade absoluta.</p>
+                <div class="hero-stats revealed">
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-tps">--</span>
+                        <span class="stat-label">TPS CAPACITY</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-latency">--</span>
+                        <span class="stat-label">LATENCY</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-security">MAX</span>
+                        <span class="stat-label">ARMORING</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#infrastructure" class="btn-primary">Explorar Infraestrutura</a>
+                    <a href="#intelligence" class="btn-secondary">MiroFish Intelligence</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div id="globe-container">
+                    <!-- 3D Particle Globe injected here -->
+                    <canvas id="globe-canvas"></canvas>
+                </div>
+                <div class="globe-glow"></div>
+            </div>
+        </section>
+
+        <section id="infrastructure" class="feature-section">
+            <div class="section-tag italic-700">Excelência Operacional</div>
+            <h2 class="section-title italic-900">Zero Hardware. Latência Sub-12ms.</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="card-icon">01</div>
+                    <h3 class="italic-700">SoftPOS Nativo</h3>
+                    <p class="italic-400">Elimine o custo e as taxas de falha dos terminais de plástico tradicionais. Implante terminais de aceitação de pagamento instantaneamente via software.</p>
+                </div>
+                <div class="feature-card highlighted">
+                    <div class="card-icon">02</div>
+                    <h3 class="italic-700">Performance de Pico</h3>
+                    <p class="italic-400">Desenvolvido para ambientes de alto volume com uma capacidade de 33.760 TPS e resposta de ultra-baixa latência.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">03</div>
+                    <h3 class="italic-700">Soberania Offline</h3>
+                    <p class="italic-400">Processe transações de forma segura mesmo sem conectividade. A selagem criptográfica garante zero perda de receita durante falhas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="intelligence" class="intelligence-section">
+            <div class="intelligence-container">
+                <div class="intelligence-header">
+                    <div class="section-tag italic-700">MiroFish Intelligence</div>
+                    <h2 class="section-title italic-900">Telemetria de Rede em Tempo Real</h2>
+                    <p class="italic-400">O motor de simulação MiroFish monitoriza a integridade da rede e o desempenho do protocolo 24/7. Visualize a resiliência da infraestrutura soberana.</p>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card glass-panel">
+                        <div class="dashboard-label">SWARM AGENTS ACTIVE</div>
+                        <div class="dashboard-value" id="swarm-agents">0</div>
+                        <div class="dashboard-chart" id="chart-swarm">
+                            <!-- Visual simulation of activity -->
+                            <div class="pulse-line"></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card glass-panel">
+                        <div class="dashboard-label">NETWORK INTEGRITY</div>
+                        <div class="dashboard-value" id="network-health">95.0%</div>
+                        <div class="integrity-bars">
+                            <div class="bar-fill" style="width: 95%;"></div>
+                        </div>
+                        <div class="dashboard-status">STATUS: SOVEREIGN OPTIMAL</div>
+                    </div>
+                    <div class="dashboard-card glass-panel highlighted-card">
+                        <div class="dashboard-label">DNA SHIELD MASKING</div>
+                        <div class="dashboard-value" id="shield-strength">14:1</div>
+                        <p class="card-subtext">Taxa de compressão e entropia na camada de camuflagem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="showcase-section">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-tag italic-700">The Sovereign Experience</div>
+                    <h2 class="section-title italic-900">Next-Gen Interface. Absolute Authority.</h2>
+                    <p class="hero-subtitle italic-400">Experience the interface engineered for high-stakes finance.
+                        Every element is optimized for speed, clarity, and sovereign control.</p>
+                    <ul class="feature-list italic-700">
+                        <li>Sub-12ms Response Logic</li>
+                        <li>Biometric PSD2 Authentication</li>
+                        <li>Real-time Fraud Heatmap</li>
+                    </ul>
+                </div>
+                <div class="showcase-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="app-screen">
+                                <div class="app-layer layer-ui">
+                                    <img src="brand/globe_logo.svg" alt="App UI" class="mockup-ui">
+                                    <div class="mockup-text italic-900">EURO TAP</div>
+                                    <div class="mockup-status italic-700">READY TO TAP</div>
+                                </div>
+                                <div class="app-layer layer-fraud">
+                                    <div class="fraud-pulse"></div>
+                                    <div class="layer-label italic-700">AI TARGETING</div>
+                                </div>
+                                <div class="app-layer layer-blockchain">
+                                    <div class="blockchain-nodes"></div>
+                                    <div class="layer-label italic-700">XED PROOF</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="security" class="security-section">
+            <div class="security-overlay">
+                <div class="section-tag italic-700">Ciber-Protection</div>
+                <h2 class="section-title italic-900">DNA Code Shield™ Technology</h2>
+                <p class="italic-400">EuroTap employs active camouflage through nucleotide-based code masking.
+                    Production builds are indecipherable to static analysis, securing the terminal logic against reverse
+                    engineering.</p>
+                <div class="dna-visualization">
+                    <span class="dna-sequence">A-T-C-G-G-C-T-A-C-G-A-T-T-A-G-C-G-A-T-A-C-G</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="compliance-section">
+            <div class="compliance-cluster">
+                <div class="badge-card italic-700">PSD3 Certified</div>
+                <div class="badge-card italic-700">GDPR Native</div>
+                <div class="badge-card italic-700">PCI-DSS Level 1</div>
+                <div class="badge-card italic-700">DORA Resilient</div>
+            </div>
+        </section>
+
+        <section id="euro-digital" class="euro-digital-section">
+            <div class="euro-content">
+                <h2 class="section-title italic-900">BCE Pilot: Euro Digital Ready</h2>
+                <p class="italic-400">The only payment infrastructure in production with native ECB Pilot API
+                    integration. Future-proof your business for the European monetary transition.</p>
+                <div class="xed-tag italic-900">SYMBOL: XED</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <p class="italic-400">&copy; 2026 EuroTap &middot; Built in Portugal &middot; Deployed Across Europe 🇪🇺
+            </p>
+            <p class="italic-400">Sovereign Strategic Asset &middot; Proprietor: Laury F.Z.</p>
+        </div>
+    </footer>
+
+    <script src="globe.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
