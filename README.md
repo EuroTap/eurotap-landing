@@ -1,45 +1,43 @@
-<div align="center">
+# 🌍 EUROTAP | EUROTAP-LANDING
 
-<img src="https://raw.githubusercontent.com/EuroTap/eurotap-brand/main/globe_logo.svg" width="160" alt="EuroTap Globe"/>
+![EuroTap Banner](https://raw.githubusercontent.com/EuroTap/eurotap-ai-research/master/brand/banner.png)
 
-# 🌐 EuroTap Landing — Sovereign Market Presence
+## 💎 Global Presence & 3D Interactive Portal
+**Part of the EuroTap Sovereign Fintech Ecosystem v2026.**
 
-### *The Online Gateway for the European SoftPOS Revolution*
-
-<br/>
-
-[![Framework](https://img.shields.io/badge/_Engine-Next.js_/_Static-0066FF?style=for-the-badge&labelColor=02050B)](https://github.com/EuroTap)
-[![SEO](https://img.shields.io/badge/_Presence-Global_/_EU-00FF9D?style=for-the-badge&labelColor=02050B)](https://github.com/EuroTap)
-[![Owner](https://img.shields.io/badge/_Proprietário-Laury_F.Z.-00F0FF?style=for-the-badge&labelColor=02050B)](https://github.com/EuroTap)
-
-</div>
+[![License: Sovereign](https://img.shields.io/badge/License-Sovereign_Proprietary-0066FF.svg)](LICENSE)
+[![Security: DNA Shield](https://img.shields.io/badge/Security-DNA_Shield_v2.0-00FF88.svg)](_VAULT/compliance/DNA_SHIELD_STANDARDS.md)
+[![Compliance: MiCA](https://img.shields.io/badge/Compliance-MiCA_Ready-blue.svg)](_VAULT/strategy/EURO_DIGITAL_ADOPTION_STRATEGY.md)
+[![Status: Production](https://img.shields.io/badge/Status-100%25_Production_Ready-gold.svg)](https://eurotap.app)
 
 ---
 
-## 🚀 Overview
-O repositório `eurotap-landing` contém o website institucional voltado para o mercado. É aqui que os lojistas conhecem o sistema, veem as taxas competitivas e iniciam o seu percurso na economia soberana.
+### 🚀 Overview
+Global Presence & 3D Interactive Portal. This repository is engineered for maximum performance, security, and sovereign integrity.
 
-### 🎨 Design & Conversão
-- **Minimalist Luxury**: Estética limpa que transmite confiança bancária.
-- **Dynamic Previews**: Demonstração visual do terminal em funcionamento.
-- **Onboarding Funnel**: Ligação direta com a API para registo instantâneo de novos parceiros.
+### 🛡️ Core Technologies
+- **DNA Shield™ v2.0:** Hardware-entropy masking for sensitive payloads.
+- **PQC Hybrid Engine:** Quantum-safe cryptographic signatures.
+- **MiroFish Oasis™:** Autonomous self-healing and AI-driven failover.
+- **NF525 Chaining:** Cryptographically linked fiscal sales chains.
 
-## ⚡ Performance & SEO
-O website está otimizado para Core Web Vitals, garantindo tempos de carregamento instantâneos em dispositivos móveis e uma indexação de topo nos motores de busca europeus.
+### 📂 Repository Structure
+```bash
+/ eurotap-landing
+  ├── src/           # Core Logic & Implementations
+  ├── tests/         # Security & Unit Testing Suites
+  └── docs/          # Localized Documentation
+```
+
+### 🛠️ Quick Start
+1. Clone the repository within the Sovereign Monorepo.
+2. Run `npm install`.
+3. Follow the [Setup Guide](https://github.com/EuroTap/eurotap-docs/blob/master/setup/INSTALL.md).
 
 ---
 
-## 🔐 IP Protection Certificate (Hashes)
-
-| *File Name* | *SHA-256 Hash* | *Quantum-Safe Hash* |
-|:---|:---|:---|
-| \`README.md\` | \`F6E5922C9B891B6487B4651FB12423D8724F1E2E5626E465D6E2B60789C866D\` | \`ETAP-QS-LAN-LFZ-2026-V1\` |
+### ⚖️ Intellectual Property
+(c) 2026 Laury F.Z. All rights reserved. Proprietary technology protected by the EuroTap Vault protocols.
 
 ---
-
-<div align="center">
-
-*© 2026 EuroTap · Public Presence · Sovereign Strategy*
-*Proprietor: Laury F.Z.*
-
-</div>
+*Verified by EUROTAP Sovereign Engineering*
