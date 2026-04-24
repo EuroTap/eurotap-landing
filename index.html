@@ -1,126 +1,162 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EuroTap — Sovereign Infrastructure 4.0</title>
+    <title>EuroTap — Sovereign Payment Infrastructure</title>
+    <meta name="description"
+        content="EuroTap v11.4 — Next-Generation SoftPOS Infrastructure for Europe. Hardware-less NFC acceptance, DNA Code Shield, and Euro Digital integration.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="brand/globe_logo.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
-<body class="italic-400">
-    <div class="draftly-noise"></div>
-    <div class="lava-background"></div>
-    <div class="grid-overlay"></div>
 
-    <header class="main-header" data-reveal>
+<body>
+    <div class="grid-background"></div>
+
+    <header class="main-header">
         <nav>
             <div class="logo-container">
-                <div class="logo-orb"></div>
-                <span class="logo-text italic-900">EUROTAP</span>
+                <img src="brand/globe_logo.svg" alt="EuroTap Logo" class="nav-logo">
+                <span class="brand-name">EURO<span class="brand-accent">TAP</span></span>
             </div>
-            <div class="nav-links">
-                <a href="#infrastructure">Infraestrutura</a>
-                <a href="#security">Segurança</a>
-                <a href="#mirofish">MiroFish</a>
-            </div>
-            <div class="nav-status">
-                <span class="status-dot"></span> <span class="italic-700">NODE_PT ONLINE</span>
+            <ul class="nav-links">
+                <li><a href="#infrastructure">Infrastructure</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#euro-digital">Digital Euro</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#" class="btn-small">Institutional Access</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- [CINEMATIC_HERO] -->
-        <section class="hero" data-reveal>
-            <h1 class="hero-title italic-900">
-                <span class="outlined-text">LIBERTE</span> A SUA<br>
-                <span class="text-gradient">SOBERANIA</span> FINANCEIRA.
-            </h1>
-            <p class="hero-subtitle">
-                A EuroTap transforma qualquer dispositivo móvel numa infraestrutura de pagamento soberana. 
-                Zero Hardware. Latência Sub-1ms. Conformidade Absoluta.
-            </p>
-            <div class="hero-actions">
-                <a href="#infrastructure" class="btn-primary">EXPLORAR INFRAESTRUTURA</a>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title italic-900">The End of the Physical Payment Terminal.</h1>
+                <p class="hero-subtitle italic-400">EuroTap transforms any mobile device into a bank-grade, sovereign
+                    payment infrastructure. No hardware. No friction. Absolute compliance.</p>
+                <div class="hero-actions">
+                    <a href="#infrastructure" class="btn-primary">Explore Infrastructure</a>
+                    <a href="https://github.com/EuroTap" class="btn-secondary">View Repository</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div id="globe-container">
+                    <!-- 3D Particle Globe injected here -->
+                    <canvas id="globe-canvas"></canvas>
+                </div>
+                <div class="globe-glow"></div>
             </div>
         </section>
 
-        <!-- [INFRASTRUCTURE_PILLARS_BENTO] -->
-        <section id="infrastructure" class="infrastructure-bento-section" data-reveal>
-            <h2 class="section-title italic-900" style="text-align: center; margin-bottom: 3rem;">
-                <span class="outlined-text">INFRAESTRUTURA</span> <span class="text-gradient">SOBERANA</span>
-            </h2>
-            <div class="bento-grid">
-                <div class="bento-card col-2 row-2">
-                    <div class="card-icon">🏗️</div>
-                    <h3 class="italic-900">Zero Data Architecture</h3>
-                    <p class="italic-400">Privacidade absoluta por design. O nosso protocolo ZDA garante que dados sensíveis nunca toquem a infraestrutura pública.</p>
-                    <div class="badge-status">ZDA_ENFORCED_V1</div>
+        <section id="infrastructure" class="feature-section">
+            <div class="section-tag italic-700">Operational Excellence</div>
+            <h2 class="section-title italic-900">Zero Hardware. Sub-12ms Latency.</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3 class="italic-700">SoftPOS Native</h3>
+                    <p class="italic-400">Eliminate the cost and failure rates of legacy plastic terminals. Deploy
+                        instant payment acceptance terminals globally via software.</p>
                 </div>
-
-                <div class="bento-card">
-                    <div class="card-icon">📲</div>
-                    <h3 class="italic-900">Omni-Aceitação</h3>
-                    <p class="italic-400">NFC via Software. Aceitamos o Mundo no seu telemóvel.</p>
+                <div class="feature-card highlighted">
+                    <h3 class="italic-700">Peak Performance</h3>
+                    <p class="italic-400">Engineered for high-volume environments with a throughput capacity of 33,760
+                        TPS and ultra-low latency response.</p>
                 </div>
-
-                <div class="bento-card">
-                    <div class="card-icon">⚡</div>
-                    <h3 class="italic-900">Solana Rails</h3>
-                    <p class="italic-400">Liquidação instantânea via EUROe com taxas de 0.5%.</p>
-                </div>
-
-                <div class="bento-card col-2">
-                    <div class="card-icon">🇪🇺</div>
-                    <h3 class="italic-900">Euro Digital Ready</h3>
-                    <p class="italic-400">Conformidade total com a infraestrutura do BCE para a futura economia digital europeia.</p>
+                <div class="feature-card">
+                    <h3 class="italic-700">Sovereign Offline</h3>
+                    <p class="italic-400">Process transactions securely even without connectivity. Cryptographic sealing
+                        ensures zero revenue loss during outages.</p>
                 </div>
             </div>
         </section>
 
-        <!-- [SECURITY_DNA_TERMINAL] -->
-        <section id="security" class="security-dna-section" data-reveal>
-            <h2 class="section-title italic-900" style="text-align: center; margin-bottom: 3rem;">
-                <span class="outlined-text">DNA</span> <span class="text-gradient">SHIELD</span>
-            </h2>
-            <div class="terminal-container">
-                <div class="terminal-body" id="dna-stream">
-                    <!-- Sequência DNA animada via JS -->
-                    A-T-C-G... INICIALIZANDO CAMUFLAGEM...
+        <section id="showcase" class="showcase-section">
+            <div class="showcase-grid">
+                <div class="showcase-content">
+                    <div class="section-tag italic-700">The Sovereign Experience</div>
+                    <h2 class="section-title italic-900">Next-Gen Interface. Absolute Authority.</h2>
+                    <p class="hero-subtitle italic-400">Experience the interface engineered for high-stakes finance.
+                        Every element is optimized for speed, clarity, and sovereign control.</p>
+                    <ul class="feature-list italic-700">
+                        <li>Sub-12ms Response Logic</li>
+                        <li>Biometric PSD2 Authentication</li>
+                        <li>Real-time Fraud Heatmap</li>
+                    </ul>
+                </div>
+                <div class="showcase-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="app-screen">
+                                <div class="app-layer layer-ui">
+                                    <img src="brand/globe_logo.svg" alt="App UI" class="mockup-ui">
+                                    <div class="mockup-text italic-900">EURO TAP</div>
+                                    <div class="mockup-status italic-700">READY TO TAP</div>
+                                </div>
+                                <div class="app-layer layer-fraud">
+                                    <div class="fraud-pulse"></div>
+                                    <div class="layer-label italic-700">AI TARGETING</div>
+                                </div>
+                                <div class="app-layer layer-blockchain">
+                                    <div class="blockchain-nodes"></div>
+                                    <div class="layer-label italic-700">XED PROOF</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p class="italic-400" style="text-align: center; margin-top: 2rem; color: var(--slate);">
-                Ofuscação Nucleotídica: O código da EuroTap é indecifrável para análises estáticas.
-            </p>
         </section>
 
-        <!-- [MIROFISH_DASHBOARD] -->
-        <section id="mirofish" class="mirofish-section" data-reveal>
-            <h2 class="section-title italic-900" style="text-align: center; margin-bottom: 3rem;">
-                <span class="outlined-text">MIROFISH</span> <span class="text-gradient">OASIS</span>
-            </h2>
-            <div class="bento-grid">
-                <div class="bento-card">
-                    <div class="card-icon">🧪</div>
-                    <h3 class="italic-900">TPS Intel</h3>
-                    <div id="stat-tps" class="text-gradient" style="font-size: 2.5rem; font-weight: 900;">--</div>
+        <section id="security" class="security-section">
+            <div class="security-overlay">
+                <div class="section-tag italic-700">Ciber-Protection</div>
+                <h2 class="section-title italic-900">DNA Code Shield™ Technology</h2>
+                <p class="italic-400">EuroTap employs active camouflage through nucleotide-based code masking.
+                    Production builds are indecipherable to static analysis, securing the terminal logic against reverse
+                    engineering.</p>
+                <div class="dna-visualization">
+                    <span class="dna-sequence">A-T-C-G-G-C-T-A-C-G-A-T-T-A-G-C-G-A-T-A-C-G</span>
                 </div>
-                <div class="bento-card">
-                    <div class="card-icon">🛡️</div>
-                    <h3 class="italic-900">Integridade</h3>
-                    <div id="stat-integrity" style="font-size: 2.5rem; font-weight: 900;">--</div>
-                </div>
-                <div class="bento-card col-2">
-                    <div class="card-icon">🌐</div>
-                    <h3 class="italic-900">Enxame Ativo</h3>
-                    <p class="italic-400" id="stat-latency">A monitorizar latência do nó...</p>
-                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="compliance-section">
+            <div class="compliance-cluster">
+                <div class="badge-card italic-700">PSD3 Certified</div>
+                <div class="badge-card italic-700">GDPR Native</div>
+                <div class="badge-card italic-700">PCI-DSS Level 1</div>
+                <div class="badge-card italic-700">DORA Resilient</div>
+            </div>
+        </section>
+
+        <section id="euro-digital" class="euro-digital-section">
+            <div class="euro-content">
+                <h2 class="section-title italic-900">BCE Pilot: Euro Digital Ready</h2>
+                <p class="italic-400">The only payment infrastructure in production with native ECB Pilot API
+                    integration. Future-proof your business for the European monetary transition.</p>
+                <div class="xed-tag italic-900">SYMBOL: XED</div>
             </div>
         </section>
     </main>
 
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <p class="italic-400">&copy; 2026 EuroTap &middot; Built in Portugal &middot; Deployed Across Europe 🇪🇺
+            </p>
+            <p class="italic-400">Sovereign Strategic Asset &middot; Proprietor: Laury F.Z.</p>
+        </div>
+    </footer>
+
+    <script src="globe.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

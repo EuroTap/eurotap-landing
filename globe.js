@@ -1,4 +1,10 @@
 /**
+ * 💎 EUROTAP SOBERANO INFRASTRUCTURE v2026
+ * (c) 2026 Laury F.Z. Todos os direitos reservados.
+ * PROPRIEDADE INTELECTUAL SOBERANA - USO NÃO AUTORIZADO É PROIBIDO.
+ */
+
+/**
  * EuroTap High-Performance 3D Particle Globe
  * Optimized for Web (Canvas 2D)
  */

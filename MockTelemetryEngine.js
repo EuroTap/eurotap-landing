@@ -1,4 +1,10 @@
 /**
+ * 💎 EUROTAP SOBERANO INFRASTRUCTURE v2026
+ * (c) 2026 Laury F.Z. Todos os direitos reservados.
+ * PROPRIEDADE INTELECTUAL SOBERANA - USO NÃO AUTORIZADO É PROIBIDO.
+ */
+
+/**
  * MockTelemetryEngine.js
  * Generates synthetic telemetry data for the EuroTap public website.
  * No real source code or PII is used here.
